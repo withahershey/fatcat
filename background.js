@@ -1,4 +1,10 @@
-var numTabs = 0;
+var storageTabs;
+
+async function init() {
+    // var numTabs = 0;
+    storageTabs = await chrome.storage.local.get({ numTabs: 0 });
+}
+init();
 chrome.tabs.onCreated.addListener(
   count
 );
@@ -6,12 +12,14 @@ chrome.tabs.onRemoved.addListener(
   uncount
 );
 
-function count() {
-  numTabs++;
-  console.log("Number of tabs: " + numTabs);
+async function count() {
+  storageTabs.numTabs++;
+  await chrome.storage.local.set({ numTabs: storageTabs.numTabs });
+  console.log("Number of tabs: " + storageTabs.numTabs);
 }
 
-function uncount() {
-  numTabs--;
-  console.log("Number of tabs: " + numTabs);
+async function uncount() {
+    storageTabs.numTabs--;
+  await chrome.storage.local.set({ numTabs: storageTabs.numTabs });
+  console.log("Number of tabs: " + storageTabs.numTabs);
 }
