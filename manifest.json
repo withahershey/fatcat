@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Fat Cat tab controller",
+    "version": "1.0",
+    "description": "A simple tab controller for managing your tabs.",
+    
+    "permissions": [
+        "tabs",
+        "storage"
+    ],
+    "background": { "service_worker": "background.js" }
+}
