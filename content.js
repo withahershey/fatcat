@@ -1,8 +1,9 @@
-const div = document.createElement('div');
-div.style.backgroundColor = 'yellow';
-div.textContent = 'fat cat';
-div.style.position = 'fixed';
-div.style.top = '0';
-div.style.right = '0';
-div.style.zIndex = '9999';
-document.body.appendChild(div);
+var img = document.createElement('div');
+img.style.backgroundImage = "url('" + chrome.runtime.getURL("images/cat1.png") + "')";
+img.style.backgroundSize = 'cover';
+img.style.width = '200px';
+img.style.height = '200px';
+img.style.position = 'fixed';
+img.style.top = 0;
+img.style.right = 0;
+document.body.appendChild(img);

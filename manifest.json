@@ -16,5 +16,11 @@
                 "<all_urls>"
             ]
         }
-    ]
+    ],
+
+    "web_accessible_resources": [
+    {
+      "resources": [ "images/cat1.png", "images/cat2.png", "images/cat3.png", "images/cat4.png", "images/cat5.png", "images/cat6.png", "images/cat7.png", "images/cat8.png", "images/cat9.png", "images/cat10.png" ],
+      "matches": ["<all_urls>"]
+    }]
 }
