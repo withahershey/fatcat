@@ -1,9 +1,11 @@
 var img = document.createElement('div');
-img.style.backgroundImage = "url('" + chrome.runtime.getURL("images/cat1.png") + "')";
+img.style.backgroundImage = "url('" + chrome.runtime.getURL("img/cat1.png") + "')";
+// img.style.backgroundColor = 'rgb(255, 0, 0)';
 img.style.backgroundSize = 'cover';
-img.style.width = '200px';
-img.style.height = '200px';
+img.style.width = '550px';
+img.style.height = '300px';
 img.style.position = 'fixed';
 img.style.top = 0;
-img.style.right = 0;
+img.style.right = '50px';
+img.style.zIndex = 10000;
 document.body.appendChild(img);

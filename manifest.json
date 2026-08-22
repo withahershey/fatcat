@@ -20,7 +20,7 @@
 
     "web_accessible_resources": [
     {
-      "resources": [ "images/cat1.png", "images/cat2.png", "images/cat3.png", "images/cat4.png", "images/cat5.png", "images/cat6.png", "images/cat7.png", "images/cat8.png", "images/cat9.png", "images/cat10.png" ],
+      "resources": [ "img/cat1.png", "img/cat2.png", "img/cat3.png", "img/cat4.png", "img/cat5.png", "img/cat6.png", "img/cat7.png", "img/cat8.png", "img/cat9.png", "img/cat10.png" ],
       "matches": ["<all_urls>"]
     }]
 }
