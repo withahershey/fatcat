@@ -8,7 +8,7 @@
         "tabs",
         "storage"
     ],
-    "background": { "service_worker": "background.js" },
+    "background": { "service_worker": "background.js", "content_scripts": ["content.js"] },
     "content_scripts": [
         {
             "js": ["content.js"],
@@ -20,7 +20,7 @@
 
     "web_accessible_resources": [
     {
-      "resources": [ "img/cat1.png", "img/cat2.png", "img/cat3.png", "img/cat4.png", "img/cat5.png", "img/cat6.png", "img/cat7.png", "img/cat8.png", "img/cat9.png", "img/cat10.png" ],
+      "resources": [ "img/cat1.png", "img/cat2.png", "img/cat3.png", "img/cat4.png", "img/cat5.png", "img/cat6.png", "img/cat7.png", "img/cat8.png", "img/cat9.png", "img/cat10.png", "img/cat11.png" ],
       "matches": ["<all_urls>"]
     }]
 }
