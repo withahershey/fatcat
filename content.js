@@ -1,4 +1,5 @@
 var img = document.createElement('div');
+var text = document.createElement('div');
 // img.style.backgroundImage = "url('" + chrome.runtime.getURL("img/cat1.png") + "')";
 // img.style.backgroundColor = 'rgb(255, 0, 0)';
 img.style.backgroundRepeat = 'no-repeat';
@@ -10,6 +11,9 @@ img.style.top = 0;
 img.style.right = '50px';
 img.style.zIndex = 2147483647;
 img.style.pointerEvents = 'none';
+text.style.right = '50px';
+text.style.position = 'fixed';
+text.style.top = '100px';
 
 
 async function updateImage() {
@@ -39,10 +43,12 @@ async function updateImage() {
     }
     console.log("tabcount:", tabcount, "stage:", stage);
     img.style.backgroundImage = "url('" + chrome.runtime.getURL("img/cat" + stage + ".png") + "')";
+    text.textContent = "Number of tabs: " + tabcount;
 }
 
 updateImage();
 document.body.appendChild(img);
+document.body.appendChild(text);
 
 chrome.storage.onChanged.addListener(function() {
   updateImage();
